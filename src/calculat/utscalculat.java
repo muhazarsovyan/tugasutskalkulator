@@ -99,6 +99,11 @@ public class utscalculat extends javax.swing.JFrame {
         });
 
         btn8.setText("8");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
 
         btn9.setText("9");
 
@@ -252,6 +257,12 @@ public class utscalculat extends javax.swing.JFrame {
          tombol += "7";
         btn7.setText(tombol);
     }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        // TODO add your handling code here:
+         tombol += "8";
+        btn8.setText(tombol);
+    }//GEN-LAST:event_btn8ActionPerformed
 
     /**
      * @param args the command line arguments
