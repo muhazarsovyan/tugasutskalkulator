@@ -17,7 +17,7 @@ public class utscalculat extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        text = new javax.swing.JTextField();
         btn1 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
         btn3 = new javax.swing.JButton();
@@ -43,9 +43,9 @@ public class utscalculat extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Droid Sans", 1, 24)); // NOI18N
         jLabel1.setText("calculator");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                textActionPerformed(evt);
             }
         });
 
@@ -128,12 +128,32 @@ public class utscalculat extends javax.swing.JFrame {
         btnsmdgn.setText("=");
 
         btnplus.setText("+");
+        btnplus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnplusActionPerformed(evt);
+            }
+        });
 
         btnmnus.setText("-");
+        btnmnus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmnusActionPerformed(evt);
+            }
+        });
 
         btnkali.setText("*");
+        btnkali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkaliActionPerformed(evt);
+            }
+        });
 
         btnbagi.setText("/");
+        btnbagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbagiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,7 +164,7 @@ public class utscalculat extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -186,7 +206,7 @@ public class utscalculat extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn1)
@@ -221,70 +241,103 @@ public class utscalculat extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_textActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
          tombol += "1";
-        btn1.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
         tombol += "2";
-        btn2.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
          tombol += "3";
-        btn3.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
          tombol += "4";
-        btn4.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         // TODO add your handling code here:
          tombol += "5";
-        btn5.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
         // TODO add your handling code here:
          tombol += "6";
-        btn6.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
         // TODO add your handling code here:
          tombol += "7";
-        btn7.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
         // TODO add your handling code here:
          tombol += "8";
-        btn8.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
         // TODO add your handling code here:
          tombol += "9";
-        btn9.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
         // TODO add your handling code here:
          tombol += "0";
-        btn0.setText(tombol);
+        text.setText(tombol);
     }//GEN-LAST:event_btn0ActionPerformed
+
+    private void btnplusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplusActionPerformed
+        // TODO add your handling code here:
+        tombol1=Double.parseDouble(tombol);
+        text.setText("+");
+        tombol="";
+        pilih=1;
+        
+    }//GEN-LAST:event_btnplusActionPerformed
+
+    private void btnmnusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmnusActionPerformed
+        // TODO add your handling code here:
+        tombol1=Double.parseDouble(tombol);
+        text.setText("-");
+        tombol="";
+        pilih=2;
+    }//GEN-LAST:event_btnmnusActionPerformed
+
+    private void btnkaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkaliActionPerformed
+        // TODO add your handling code here:
+        tombol1=Double.parseDouble(tombol);
+        text.setText("*");
+        tombol="";
+        pilih=3;
+    }//GEN-LAST:event_btnkaliActionPerformed
+
+    private void btnbagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbagiActionPerformed
+        // TODO add your handling code here:
+        tombol1=Double.parseDouble(tombol);
+        text.setText("/");
+        tombol="";
+        pilih=4;
+    }//GEN-LAST:event_btnbagiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -341,6 +394,6 @@ public class utscalculat extends javax.swing.JFrame {
     private javax.swing.JButton btnsmdgn;
     private javax.swing.JButton btnttk;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField text;
     // End of variables declaration//GEN-END:variables
 }
