@@ -136,6 +136,11 @@ public class utscalculat extends javax.swing.JFrame {
         btnpm.setText("+/-");
 
         btnsmdgn.setText("=");
+        btnsmdgn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsmdgnActionPerformed(evt);
+            }
+        });
 
         btnplus.setText("+");
         btnplus.addActionListener(new java.awt.event.ActionListener() {
@@ -363,6 +368,40 @@ public class utscalculat extends javax.swing.JFrame {
         tombol += ".";
         text.setText(tombol);
     }//GEN-LAST:event_btnttkActionPerformed
+
+    private void btnsmdgnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsmdgnActionPerformed
+        // TODO add your handling code here:
+          switch(pilih){
+     case 1:
+         tombol2 = Double.parseDouble(tombol);
+         jumlah = tombol1 + tombol2;
+         tombol = Double.toString(jumlah);
+         text.setText(tombol);
+         break;
+        
+     case 2:
+         tombol2 = Double.parseDouble(tombol); jumlah = tombol1 - tombol2;
+         tombol = Double.toString(jumlah);
+         text.setText(tombol);
+         break;
+    
+     case 3:
+         tombol2 = Double.parseDouble(tombol);
+         jumlah = tombol1 * tombol2;
+         tombol = Double.toString(jumlah);
+         text.setText(tombol);
+         break;
+        
+     case 4:
+         tombol2 = Double.parseDouble(tombol);
+         jumlah = tombol1 / tombol2;
+         tombol = Double.toString(jumlah);
+         text.setText(tombol);
+         break;
+     default:
+         break;
+       }
+    }//GEN-LAST:event_btnsmdgnActionPerformed
 
     /**
      * @param args the command line arguments
